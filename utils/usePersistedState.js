@@ -1,25 +1,17 @@
 import { useState, useEffect } from "react";
 
 function usePersistedState(key, initialState) {
-  // const [state,setState] = useState(initialState);
-  const [state,setState] = useState(() => {
+  const [state,setState] = useState(initialState);
+  useEffect(() => {
     const storageValue = localStorage.getItem(key);
     if ( storageValue) {
-      return(JSON.parse(storageValue));
+      setState(JSON.parse(storageValue));
     }
-    return initialState
-  });
+  }, [setState]);
 
-  // useEffect(() => {
-  //   const storageValue = localStorage.getItem(key);
-  //   if ( storageValue) {
-  //     setState(JSON.parse(storageValue));
-  //   }
-  // }, [setState])
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(state))
-    
-  }, [state])
+  }, [state]);
 
 
   return [state,setState]

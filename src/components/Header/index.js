@@ -4,7 +4,7 @@ import {useContext} from 'react';
 import { ThemeContext } from 'styled-components';
 import { AppContext } from '../../context/AppContext';
 
-export default function Home({toggleTheme}) {
+export default function HeaderApp({toggleTheme}) {
   const { colors, title } = useContext(ThemeContext);
   // const {toggleTheme} = useContext(AppContext);
 
