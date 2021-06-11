@@ -1,5 +1,7 @@
 import {  useState  } from "react";
 import AppContext from './AppContext';
+import dark from '../styles/dark';
+import light from '../styles/light'
 
 
 const AppProvider = ({children}) => {

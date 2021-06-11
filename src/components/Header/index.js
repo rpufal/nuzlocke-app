@@ -4,9 +4,10 @@ import {useContext} from 'react';
 import { ThemeContext } from 'styled-components';
 import { AppContext } from '../../context/AppContext';
 
-export default function Home() {
+export default function Home({toggleTheme}) {
   const { colors, title } = useContext(ThemeContext);
-  const {toggleTheme} = useContext(AppContext);
+  // const {toggleTheme} = useContext(AppContext);
+
   return (
       <HeaderNav>
         {/* <nav> */}
@@ -26,10 +27,12 @@ export default function Home() {
             checkedIcon={false}
             uncheckedIcon={false}
             height={10}
-            width={40}
-            handleDiameter={15}
+            width={35}
+            handleDiameter={20}
             offColor={colors.secondary}
-            onColor={colors.text}
+            onColor={colors.secondary}
+            offHandleColor={colors.contrast}
+            onHandleColor={colors.contrast}
           />
           <img src="/united-kingdom.png" alt="britain-flag" width={25}/>
         {/* </nav> */}
