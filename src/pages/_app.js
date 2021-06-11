@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps }) {
   // const toggleTheme = () => {
   //   setTheme(theme.title === "light" ? dark : light);
   // };
-  const context = useContext(AppContext);
+  const {context} = useContext(AppContext);
   return (
-  <ThemeProvider theme={context.theme}>
+  <ThemeProvider theme={theme}>
     <AppProvider>
       <Component {...pageProps} />
       {/* <Home /> */}
