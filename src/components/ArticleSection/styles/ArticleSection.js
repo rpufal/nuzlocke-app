@@ -5,8 +5,8 @@ export const ArticleDisplay = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  margin-top: 1.5%;
+  width: 100%;
+  margin-top: 5rem;
   margin-bottom: 1.5%;
   padding-bottom: 0.7%;
   background-color: ${props => props.theme.colors.contrast};

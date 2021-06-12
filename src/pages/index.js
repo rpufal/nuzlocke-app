@@ -1,20 +1,23 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ArticleSection from '../components/ArticleSection';
+import Trending from '../components/Trending';
+import { MainArticles } from './styles/Home';
 
 export default function Home({toggleTheme}) {
   return (
-    <main>
+    <>
       <Header toggleTheme={toggleTheme}/>
-      <section>
-        <section>
-          <ArticleSection />
-        </section>
-        <section>
-
-        </section>
-      </section>
+      <MainArticles>
+          <section class="left-content">
+            <ArticleSection />
+            <ArticleSection />
+           </section>
+          <section class="right-content">
+            <Trending />
+          </section>
+      </MainArticles>
       <Footer />
-    </main>
+    </>
   )
 }
