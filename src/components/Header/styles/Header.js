@@ -25,6 +25,7 @@ export const HeaderNav = styled.header`
     color: ${props =>  props.theme.colors.text};
     padding: 5px;
     border-radius: 5px;
+    border: none;
   }
   h3 {
     color: ${props => props.theme.colors.secondary};

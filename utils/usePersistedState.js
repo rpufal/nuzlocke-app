@@ -7,7 +7,7 @@ function usePersistedState(key, initialState) {
     if ( storageValue) {
       setState(JSON.parse(storageValue));
     }
-  }, [setState]);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(state))
