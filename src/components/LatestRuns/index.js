@@ -1,4 +1,6 @@
 import { LatestSection } from "./styles/LatestRuns";
+import CurrentRun from "./CurrentRun";
+import {CompiledRuns} from '../../../services/CompiledRuns';
 
 export default function LatestRuns() {
   return (
@@ -7,20 +9,9 @@ export default function LatestRuns() {
         <h3>Latest Runs</h3>
       </div>
       <div class="panel">
-        <div class="current-run">
-          <img class="game-cover" src="/light/pokeball.png" alt="game cover"/>
-          <h4>Pokemon Emerald</h4>
-          <img class="country-icon" src="/united-kingdom.png" alt="country flag"/>
-          <h4 class="userName">rpufal</h4>
-          <h4 class="run-status">Finished</h4>
-        </div>
-        <div class="current-run">
-          <img class="game-cover" src="/light/pokeball.png" alt="game cover"/>
-          <h4>Pokemon Emerald</h4>
-          <img class="country-icon" src="/united-kingdom.png" alt="country flag"/>
-          <h4 class="userName">rpufal</h4>
-          <h4 class="run-status">Finished</h4>
-        </div>
+        {CompiledRuns['runs'].map((current, index) => (
+        <CurrentRun props={current} key={`${current['GameTitle']}+${index}`}/>
+        ))}
       </div>
     </LatestSection>
   );

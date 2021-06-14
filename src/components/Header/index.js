@@ -33,7 +33,7 @@ export default function HeaderApp({toggleTheme}) {
             offHandleColor={colors.contrast}
             onHandleColor={colors.contrast}
           />
-          <img src="/united-kingdom.png" alt="britain-flag" width={25}/>
+          <img src="/country-icons/united-kingdom.png" alt="britain-flag" width={25}/>
         {/* </nav> */}
       </HeaderNav>
   )

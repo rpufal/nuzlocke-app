@@ -29,24 +29,4 @@ display: flex;
     width: 100%;
     padding-left: 5%;
   }
-
-  .current-run {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5%;
-    /* margin-top: 0.5rem; */
-  }
-
-  .game-cover {
-    width: 6%;
-  }
-
-  .country-icon {
-    width: 6%;
-  }
-
-
 `;

@@ -16,6 +16,7 @@ export default function Home({toggleTheme}) {
            </section>
           <section class="right-content">
             <Trending />
+            <Trending />
           </section>
       </MainArticles>
       <Footer />
