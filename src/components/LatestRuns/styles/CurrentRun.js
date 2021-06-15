@@ -7,6 +7,7 @@ export const CurrentRunDiv = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-bottom: 1.5%;
+  height: 4.5rem;
 
   .cell {
     width: 14.2%;

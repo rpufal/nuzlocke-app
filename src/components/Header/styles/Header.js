@@ -8,6 +8,8 @@ export const HeaderNav = styled.header`
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 3rem;
+  position: fixed;
+  width: 100%;
   /* nav {
     display: flex;
     flex-direction: row;

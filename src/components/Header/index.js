@@ -16,7 +16,7 @@ export default function HeaderApp({toggleTheme}) {
           </div>
           <h3>Games</h3>
           <h3>Streams</h3>
-          <h3>Hall of fame</h3>
+          <h3>Hall of Fame</h3>
           <input type="text" placeholder="Search for your favorite game, nuzlocker, etc."/>
           <h3>Log in</h3>
           <h3>Sign up</h3>
