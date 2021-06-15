@@ -2,25 +2,24 @@ import { HeaderNav } from './styles/Header';
 import Switch from 'react-switch';
 import {useContext} from 'react';
 import { ThemeContext } from 'styled-components';
-import { AppContext } from '../../context/AppContext';
 
-export default function Home({toggleTheme}) {
+export default function HeaderApp({toggleTheme}) {
   const { colors, title } = useContext(ThemeContext);
-  // const {toggleTheme} = useContext(AppContext);
+
 
   return (
       <HeaderNav>
         {/* <nav> */}
           <div>
-            <img src="/pokeball.png" alt="pokeball" width={30}/>
+            <img src={`/${title}/pokeball.png`} alt="pokeball" width={30}/>
             <h3>JNI</h3>
           </div>
-          <h3>games</h3>
-          <h3>streams</h3>
-          <h3>hall of fame</h3>
+          <h3>Games</h3>
+          <h3>Streams</h3>
+          <h3>Hall of fame</h3>
           <input type="text" placeholder="Search for your favorite game, nuzlocker, etc."/>
-          <h3>log in</h3>
-          <h3>sign up</h3>
+          <h3>Log in</h3>
+          <h3>Sign up</h3>
           <Switch 
             onChange={toggleTheme}
             checked={title === 'dark'}
@@ -34,7 +33,7 @@ export default function Home({toggleTheme}) {
             offHandleColor={colors.contrast}
             onHandleColor={colors.contrast}
           />
-          <img src="/united-kingdom.png" alt="britain-flag" width={25}/>
+          <img src="/country-icons/united-kingdom.png" alt="britain-flag" width={25}/>
         {/* </nav> */}
       </HeaderNav>
   )

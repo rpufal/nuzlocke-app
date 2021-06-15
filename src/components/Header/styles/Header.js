@@ -7,6 +7,7 @@ export const HeaderNav = styled.header`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 3rem;
   /* nav {
     display: flex;
     flex-direction: row;
@@ -25,6 +26,7 @@ export const HeaderNav = styled.header`
     color: ${props =>  props.theme.colors.text};
     padding: 5px;
     border-radius: 5px;
+    border: none;
   }
   h3 {
     color: ${props => props.theme.colors.secondary};
