@@ -6,7 +6,7 @@ export const ArticleDisplay = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 4.5rem;
+  /* margin-top: 4.5rem; */
   margin-bottom: 1.5%;
   padding-bottom: 0.7%;
   background-color: ${props => props.theme.colors.contrast};
@@ -48,5 +48,10 @@ export const ArticleDisplay = styled.section`
 
   h4 {
     margin-left: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.text};
   }
 `;

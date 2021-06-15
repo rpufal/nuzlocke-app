@@ -10,11 +10,7 @@ export const HeaderNav = styled.header`
   margin-bottom: 3rem;
   position: fixed;
   width: 100%;
-  /* nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  } */
+
   div {
     display: flex;
     flex-direction: row;
@@ -22,6 +18,11 @@ export const HeaderNav = styled.header`
     align-items: center;
     width: 5%;
   }
+
+  a {
+    text-decoration: none;
+  }
+
   input {
     width: 20%;
     background-color: ${props =>  props.theme.colors.secondary};

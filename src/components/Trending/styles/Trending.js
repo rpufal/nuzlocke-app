@@ -5,7 +5,7 @@ width: 100%;
 background-color: ${props=> props.theme.colors.contrast};
 padding-top: 0.8%;
 padding-bottom: 1.5%;
-margin-top:4.5rem;
+margin-bottom: 2rem;
 border-top: 0.35rem solid ${props => props.theme.colors.primary};
 
 h3,p {

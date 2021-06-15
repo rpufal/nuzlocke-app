@@ -9,11 +9,15 @@ export default function ArticleSection() {
       <div class="article-panel">
         <section class="article">
           <div>
-          <img class="thumbnail" src="/articles/confused-charizard.gif" alt="confused-charizard-gif"/>
+          <a href="/dexvault/what-is-nuzlocke/">
+            <img class="thumbnail" src="/articles/confused-charizard.gif" alt="confused-charizard-gif"/>
+          </a>
           </div>
           <span>
             {/* <img src="/light/pokeball.png" alt="nuzlocke-logo" width={16}/> */}
-            <h4>What is a Nuzlocke?</h4>
+            <a href="/dexvault/what-is-nuzlocke/">
+              <h4>What is a Nuzlocke?</h4>
+            </a>
           </span>
         </section>
         <section class="article">
