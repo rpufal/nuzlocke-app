@@ -8,11 +8,9 @@ export const HeaderNav = styled.header`
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 3rem;
-  /* nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  } */
+  position: fixed;
+  width: 100%;
+
   div {
     display: flex;
     flex-direction: row;
@@ -20,6 +18,11 @@ export const HeaderNav = styled.header`
     align-items: center;
     width: 5%;
   }
+
+  a {
+    text-decoration: none;
+  }
+
   input {
     width: 20%;
     background-color: ${props =>  props.theme.colors.secondary};

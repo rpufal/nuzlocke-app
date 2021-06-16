@@ -74,6 +74,81 @@
                 "RunNumber": 7
             },
             "Tags": ["No Items", "No overleveling", "Set mode", "Bugs only"]
+        },
+        {
+            "GameTitle": "Pokemon Platinum",
+            "GameThumbnail": "/game-thumbnails/platinum.png",
+            "Username": "leo10",
+            "Country": {
+                "CountryIcon": "/country-icons/argentina.png",
+                "CountryName": "Argentina"
+            },
+            "Status": {
+                "Finished": 0,
+                "Win": '',
+                "RunNumber": 11
+            },
+            "Tags": ["No Items", "No overleveling", "Set mode", "Egglocke"]
+        },
+        {
+            "GameTitle": "Pokemon Moon",
+            "GameThumbnail": "/game-thumbnails/moon.jpg",
+            "Username": "luoguofu9",
+            "Country": {
+                "CountryIcon": "/country-icons/china.png",
+                "CountryName": "China"
+            },
+            "Status": {
+                "Finished": 1,
+                "Win": 'lost',
+                "RunNumber": 1
+            },
+            "Tags": ["Basic"]
+        },
+        {
+            "GameTitle": "Pokemon Crystal",
+            "GameThumbnail": "/game-thumbnails/crystal.png",
+            "Username": "heungmin7",
+            "Country": {
+                "CountryIcon": "/country-icons/south-korea.png",
+                "CountryName": "South-Korea"
+            },
+            "Status": {
+                "Finished": 1,
+                "Win": 'won',
+                "RunNumber": 2
+            },
+            "Tags": ["Set mode", "Johto only"]
+        },
+        {
+            "GameTitle": "Pokemon Let's Go Eevee",
+            "GameThumbnail": "/game-thumbnails/letsgo_eevee.png",
+            "Username": "ninjaShoyo",
+            "Country": {
+                "CountryIcon": "/country-icons/japan.png",
+                "CountryName": "Japan"
+            },
+            "Status": {
+                "Finished": 1,
+                "Win": 'won',
+                "RunNumber": 1
+            },
+            "Tags": ["Basic"]
+        },
+        {
+            "GameTitle": "Pokemon Alpha Sapphire",
+            "GameThumbnail": "/game-thumbnails/alphasapphire.png",
+            "Username": "pogboom93",
+            "Country": {
+                "CountryIcon": "/country-icons/france.png",
+                "CountryName": "France"
+            },
+            "Status": {
+                "Finished": 1,
+                "Win": 'lost',
+                "RunNumber": 2
+            },
+            "Tags": ["No Items", "No overleveling", "Set mode", "Blue pokemon only"]
         }
     ]
 }

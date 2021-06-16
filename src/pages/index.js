@@ -15,8 +15,14 @@ export default function Home({toggleTheme}) {
             <LatestRuns />
            </section>
           <section class="right-content">
-            <Trending />
-            <Trending />
+            <Trending 
+            articleImage={"/articles/graph_sinergy_cropped.png"}
+            articleTitle={"What's the sinergy between some competitive Pokémon"}
+            />
+            <Trending
+            articleImage={"/articles/types_hexagram_cropped.png"}
+            articleTitle={"Find out the most desirable properties for winning Pokémon"}
+            />
           </section>
       </MainArticles>
       <Footer />
