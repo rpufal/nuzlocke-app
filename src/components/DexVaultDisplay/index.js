@@ -27,6 +27,7 @@ export default function DexVaultDisplay() {
 
   Speedrun.com also aims to highlight all facets of the speedrunning community. From marathons raising millions of dollars for charity to competitions and races to those who help route and find the game-changing glitches, the speedrunning ecosystem is robust and every contribution matters. Learn more about Speedrun.com on the About page.
           </p>
+          
           <h3>Next article</h3>
           <h3>Previous article</h3>
       </div>

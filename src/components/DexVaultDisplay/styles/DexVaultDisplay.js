@@ -5,6 +5,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 width: 100%;
+margin-bottom: 5.8rem;
 
 .content-index {
   width: 24.5%;
@@ -22,9 +23,7 @@ width: 100%;
 
 .main-content {
   width: 74.5%;
-  height: 20rem;
   background-color: ${props => props.theme.colors.contrast};
-  /* align-items: center; */
 }
 
 ul {

@@ -7,6 +7,7 @@ export const FooterApp = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
 
   p {
     color: ${props => props.theme.colors.secondary};
