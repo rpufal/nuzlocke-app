@@ -6,10 +6,10 @@ import Trending from '../../components/Trending';
 import { MainArticles } from '../../styles/pages/Home';
 
 
-export default function NuzlockeExplained () {
+export default function NuzlockeExplained ({toggleTheme}) {
   return (
     <div>
-      <Header />
+      <Header toggleTheme={toggleTheme} />
       <MainArticles>
         <section class='left-content'>
           <DexVaultDisplay />
