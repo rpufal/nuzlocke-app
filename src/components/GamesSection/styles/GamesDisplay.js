@@ -17,9 +17,11 @@ export const GamesDisplay = styled.section`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
+    /* margin-left: 2.5%; */
+    /* margin-right: 2.5%; */
   }
 
   .title {

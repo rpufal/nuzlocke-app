@@ -6,7 +6,6 @@ export const GameCardDisplay = styled.div`
   /* margin-right: 5px;
   margin-left: 5px; */
   width: 20%;
-  /* justify-content: center; */
   align-items: center;
   /* border: 1px solid ${props=> props.theme.colors.primary}; */
   margin: 1rem;
