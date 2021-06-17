@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LatestSection = styled.section`
+export const GamesDisplay = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,14 +12,15 @@ export const LatestSection = styled.section`
   background-color: ${props => props.theme.colors.contrast};
   border-top: 0.35rem solid ${props => props.theme.colors.primary};
 
+
   .panel {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
-
 
   .title {
     height: 2.5rem;

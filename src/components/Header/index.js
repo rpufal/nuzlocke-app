@@ -18,7 +18,7 @@ export default function HeaderApp({toggleTheme}) {
               <h3>JNI</h3>
             </a>
           </div>
-          <h3>Games</h3>
+          <a href="/games"><h3>Games</h3></a>
           <h3>Streams</h3>
           <h3>Hall of Fame</h3>
           <input type="text" placeholder="Search for your favorite game, nuzlocker, etc."/>
