@@ -107,6 +107,33 @@ export const GamesList = {
     Generation: 6,
     Official: 1,
     Developer: 'DioVento',
-  }
+  },
+  {
+    GameName: "Pokémon SuperNova Sun",
+    GameThumbnail: "/game-thumbnails/ultrasun.png",
+    NumberPlayers: 56,
+    Platform: "3DS",
+    Generation: 6,
+    Official: 0,
+    Developer: 'DioVento',
+  },
+  {
+    GameName: "Pokémon Emerald Kaizo",
+    GameThumbnail: "/game-thumbnails/emerald.png",
+    NumberPlayers: 1759,
+    Platform: "GBA",
+    Generation: 3,
+    Official: 0,
+    Developer: 'SinisterHoodedFigure',
+  },
+  {
+    GameName: "Pokémon Crystal Clear",
+    GameThumbnail: "/game-thumbnails/crystal.png",
+    NumberPlayers: 82,
+    Platform: "GBC",
+    Generation: 2,
+    Official: 0,
+    Developer: 'ShockSlayer',
+  },
 ]
 }

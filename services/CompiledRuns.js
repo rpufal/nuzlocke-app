@@ -92,7 +92,7 @@
         },
         {
             "GameTitle": "Pokemon Moon",
-            "GameThumbnail": "/game-thumbnails/moon.jpg",
+            "GameThumbnail": "/game-thumbnails/moon.png",
             "Username": "luoguofu9",
             "Country": {
                 "CountryIcon": "/country-icons/china.png",
