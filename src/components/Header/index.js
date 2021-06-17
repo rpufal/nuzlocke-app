@@ -29,8 +29,8 @@ export default function HeaderApp({toggleTheme}) {
             checked={title === 'dark'}
             checkedIcon={false}
             uncheckedIcon={false}
-            height={10}
-            width={35}
+            height={15}
+            width={40}
             handleDiameter={20}
             offColor={colors.secondary}
             onColor={colors.secondary}
