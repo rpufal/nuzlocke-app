@@ -1,6 +1,7 @@
 import { LatestSection } from "./styles/LatestRuns";
-import CurrentRun from "./CurrentRun";
+import CurrentRun from "../CurrentRun";
 import {CompiledRuns} from '../../../services/CompiledRuns';
+import CurrentRunHeader from "../CurrentRunHeader";
 
 export default function LatestRuns() {
   return (
@@ -9,6 +10,7 @@ export default function LatestRuns() {
         <h3>Latest Runs</h3>
       </div>
       <div class="panel">
+        <CurrentRunHeader />
         {CompiledRuns['runs'].map((current, index) => (
         <CurrentRun props={current} key={`${current['GameTitle']}+${index}`}/>
         ))}

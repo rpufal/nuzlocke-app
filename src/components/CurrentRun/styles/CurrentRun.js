@@ -39,4 +39,8 @@ export const CurrentRunDiv = styled.div`
     width: 25%;
   }
 
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.text};
+  }
 `;

@@ -12,11 +12,6 @@ export default function GamesSection() {
   })
   const [games, setGames] = useState(GamesList['Games']);
 
-  // const filterFunction = (filters) => {
-    
-
-  // }
-
   useEffect(() => {
     const gamesFiltered1 = GamesList["Games"].filter((game) => {
       if (filters["platforms"] !== "all") {

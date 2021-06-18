@@ -6,10 +6,14 @@ export default function CurrentRun ({props}) {
   return (
     <CurrentRunDiv>
       <div class="cell">
-        <img class="game-cover" src={GameThumbnail} alt={`${GameTitle} cover art`}/>
+        <a href={`/games/heartgold`}>
+          <img class="game-cover" src={GameThumbnail} alt={`${GameTitle} cover art`}/>
+        </a>
       </div>
       <div class="cell">
-        <h4 class="game-title">{GameTitle}</h4>
+        <a href={`/games/heartgold`}>
+          <h4 class="game-title">{GameTitle}</h4>
+        </a>
       </div>
       <div class="cell">
         <img class="country-icon" src={Country['CountryIcon']} alt={`${Country['CountryName']} flag`}/>

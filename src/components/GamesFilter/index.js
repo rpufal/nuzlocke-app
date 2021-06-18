@@ -36,7 +36,7 @@ export default function GamesFilter({filters, setFilters}) {
           <p>Show Unnoficial Releases</p>
         </div>
       </form>
-      <button>Request a game!</button>
+      {/* <button>Request a game!</button> */}
     </GamesFilterDisplay>
   )
 }

@@ -8,6 +8,7 @@ export const GamesList = {
     Generation: "6",
     Official: 1,
     Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Black 2",
@@ -17,6 +18,7 @@ export const GamesList = {
     Generation: "5",
     Official: 1,
     Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Crystal",
@@ -26,6 +28,7 @@ export const GamesList = {
     Generation: "2",
     Official: 1,
     Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Emerald",
@@ -35,6 +38,7 @@ export const GamesList = {
     Generation: "3",
     Official: 1,
     Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Sacred Gold",
@@ -44,6 +48,7 @@ export const GamesList = {
     Generation: "4",
     Official: 0,
     Developer: 'Drayano',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Let's Go Eevee",
@@ -53,6 +58,7 @@ export const GamesList = {
     Generation: "7",
     Official: 1,
     Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Moon",
@@ -62,6 +68,7 @@ export const GamesList = {
     Generation: "7",
     Official: 1,
     Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Renegade Platinum",
@@ -71,6 +78,7 @@ export const GamesList = {
     Generation: "4",
     Official: 0,
     Developer: 'Drayano',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Y",
@@ -80,6 +88,7 @@ export const GamesList = {
     Generation: "6",
     Official: 1,
     Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Red",
@@ -89,6 +98,7 @@ export const GamesList = {
     Generation: "1",
     Official: 1,
     Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Sword",
@@ -98,6 +108,7 @@ export const GamesList = {
     Generation: "8",
     Official: 1,
     Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon SuperNova Sun",
@@ -107,6 +118,7 @@ export const GamesList = {
     Generation: "7",
     Official: 0,
     Developer: 'DioVento',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Ultra Sun",
@@ -115,7 +127,8 @@ export const GamesList = {
     Platform: "Nintendo 3DS",
     Generation: "7",
     Official: 1,
-    Developer: 'DioVento',
+    Developer: 'GameFreak',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Emerald Kaizo",
@@ -125,6 +138,7 @@ export const GamesList = {
     Generation: "3",
     Official: 0,
     Developer: 'SinisterHoodedFigure',
+    url: '/heartgold',
   },
   {
     GameName: "Pokémon Crystal Clear",
@@ -134,6 +148,7 @@ export const GamesList = {
     Generation: "2",
     Official: 0,
     Developer: 'ShockSlayer',
+    url: '/heartgold',
   },
 ]
 }
