@@ -5,6 +5,7 @@ import Trending from '../components/Trending';
 import LatestRuns from '../components/LatestRuns';
 import { MainArticles } from '../styles/pages/Home';
 
+
 export default function Home({toggleTheme}) {
   return (
     <>
