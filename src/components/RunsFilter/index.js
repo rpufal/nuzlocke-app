@@ -2,7 +2,7 @@ import { RunsFilterDisplay  } from "./styled/RunsFilter";
 
 export default function RunsFilter ({filters,setFilters}) {
   const countries = ["Brazil", "France", "Spain", "Argentina"];
-  const tags = ["No Items", "No Overleveling", "Set Mode", "Basic"];
+  const tags = ["No Items", "No overleveling", "Set Mode", "Basic"];
   return (
     <RunsFilterDisplay>
       <select name="sort-attempts" onChange={({target})=> setFilters({...filters, attempts: target.value})}>

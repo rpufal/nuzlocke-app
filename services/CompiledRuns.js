@@ -118,7 +118,7 @@
                 "Win": 'won',
                 "RunNumber": 2
             },
-            "Tags": ["Set mode", "Johto only"]
+            "Tags": ["Set Mode", "Johto only"]
         },
         {
             "GameTitle": "Pokemon Let's Go Eevee",

@@ -18,7 +18,30 @@ const sortByAttempts = (runs, filterStatus) => {
   }
   return sortedRuns;
 }
+const handleFilters = (runs, filters) => {
+  const runsSorted1 = sortByAttempts(runs, filters.attempts);
+  const runsFiltered1 = runsSorted1.filter((run) => {
+    if (filters["status"] !== "all") {
+      return run["Status"]["Finished"] === filters["status"] || run["Status"]["Win"] === filters["status"];
+    }
+    return run;
+  });
 
+  const runsFiltered2 = runsFiltered1.filter((run) => {
+    if (filters["country"] !== "all") {
+      return run["Country"]["CountryName"] === filters["country"];
+    }
+    return run;
+  });
+
+  const runsFiltered3 = runsFiltered2.filter((run) => {
+    if (filters["tags"] !== "all") {
+      return run["Tags"].includes(filters["tags"]);
+    }
+    return run;
+  })
+  return runsFiltered3;
+}
 
 export default function SingleGameDetails () {
   const [filters, setFilters] = useState({
@@ -29,31 +52,9 @@ export default function SingleGameDetails () {
   })
   const [runs, setRuns] = useState(CompiledRuns["runs"])
   useEffect(() => {
-    let runsToFilter = CompiledRuns["runs"];
-    let runsSorted1 =  sortByAttempts(runsToFilter, filters.attempts);
-
-    const runsFiltered1 = runsSorted1.filter((run) => {
-      if (filters["status"] !== "all") {
-        return run["Status"]["Finished"] === filters["status"] || run["Status"]["Win"] === filters["status"];
-      }
-      return run;
-    });
-
-    const runsFiltered2 = runsFiltered1.filter((run) => {
-      if (filters["country"] !== "all") {
-        return run["Country"]["CountryName"] === filters["country"];
-      }
-      return run;
-    });
-
-    const runsFiltered3 = runsFiltered2.filter((run) => {
-      if (filters["tags"] !== "all") {
-        return run["Tags"].includes(filters["tags"]);
-      }
-      return run;
-    })
-
-    setRuns(runsFiltered3);
+    const runsToFilter = CompiledRuns["runs"];
+    const filteredRuns = handleFilters(runsToFilter, filters)
+    setRuns(filteredRuns);
   },[filters])
 
   return (
