@@ -1,6 +1,6 @@
 import { GamesFilterDisplay } from './styles/GamesFilterDisplay';
 import Switch from 'react-switch';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
 

@@ -13,6 +13,7 @@ export const GameDetails = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
+    border-top: 0.35rem solid ${props => props.theme.colors.primary};
   }
 
   .info-card {
@@ -47,8 +48,29 @@ export const GameDetails = styled.div`
     margin-bottom: 2%;
   }
 
+  .index h3:hover {
+    color: ${props => props.theme.colors.primary};
+  }
+
   .main-content {
     background-color: ${props => props.theme.colors.contrast};
+    border-top: 0.35rem solid ${props => props.theme.colors.primary};
     width: 73%;
+    /* margin: 5%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main-content h2 {
+    margin: 1.5%;
+  }
+
+  .run-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
   }
 `;

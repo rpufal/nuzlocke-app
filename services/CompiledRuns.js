@@ -9,7 +9,7 @@
                 "CountryName": "Brazil"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'lost',
                 "RunNumber": 4
             },
@@ -24,7 +24,7 @@
                 "CountryName": "Italy"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'won',
                 "RunNumber": 1
             },
@@ -39,7 +39,7 @@
                 "CountryName": "Russia"
             },
             "Status": {
-                "Finished": 0,
+                "Finished": 'ongoing',
                 "Win": '',
                 "RunNumber": 31
             },
@@ -54,7 +54,7 @@
                 "CountryName": "Germany"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'won',
                 "RunNumber": 1
             },
@@ -69,7 +69,7 @@
                 "CountryName": "Spain"
             },
             "Status": {
-                "Finished": 0,
+                "Finished": 'ongoing',
                 "Win": '',
                 "RunNumber": 7
             },
@@ -84,7 +84,7 @@
                 "CountryName": "Argentina"
             },
             "Status": {
-                "Finished": 0,
+                "Finished": 'ongoing',
                 "Win": '',
                 "RunNumber": 11
             },
@@ -99,7 +99,7 @@
                 "CountryName": "China"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'lost',
                 "RunNumber": 1
             },
@@ -114,7 +114,7 @@
                 "CountryName": "South-Korea"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'won',
                 "RunNumber": 2
             },
@@ -129,7 +129,7 @@
                 "CountryName": "Japan"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'won',
                 "RunNumber": 1
             },
@@ -144,7 +144,7 @@
                 "CountryName": "France"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'lost',
                 "RunNumber": 2
             },

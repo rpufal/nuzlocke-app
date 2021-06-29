@@ -22,7 +22,7 @@ export default function CurrentRun ({props}) {
       <h4 class="userName">{Username}</h4>
       </div>
       <div class="cell">
-        { Status['Finished']? <h4 class={`run-status ${Status.Win}`}>Finished</h4> : <h4 class="run-status ongoing">Ongoing</h4>}
+        { Status['Finished'] === 'finished'? <h4 class={`run-status ${Status.Win}`}>Finished</h4> : <h4 class="run-status ongoing">Ongoing</h4>}
       </div>
       <div class="cell">
         <h4 class="run-number">{Status.RunNumber}</h4>

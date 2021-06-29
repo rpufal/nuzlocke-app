@@ -2,8 +2,52 @@ import { GameDetails } from "./styles/GameDetails"
 import { CompiledRuns } from "../../../services/CompiledRuns";
 import CurrentRun from "../CurrentRun";
 import CurrentRunHeader from "../CurrentRunHeader";
+import RunsFilter from "../RunsFilter";
+import { useState, useEffect } from "react";
+
+const sortByAttempts = (runs, filterStatus) => {
+  let sortedRuns = runs; 
+  if (filterStatus === "least") {
+    sortedRuns = CompiledRuns["runs"].sort((firstItem, secondItem) => firstItem.Status.RunNumber - secondItem.Status.RunNumber)
+  }
+  if (filterStatus === "most") {
+    sortedRuns = CompiledRuns["runs"].sort((firstItem, secondItem) => secondItem.Status.RunNumber - firstItem.Status.RunNumber)
+  }
+  if (filterStatus === "all") {
+    sortedRuns = CompiledRuns["runs"];
+  }
+  return sortedRuns;
+}
+
 
 export default function SingleGameDetails () {
+  const [filters, setFilters] = useState({
+    attempts: "all",
+    status: "all",
+    country: "all"
+  })
+  const [runs, setRuns] = useState(CompiledRuns["runs"])
+  useEffect(() => {
+    let runsToFilter = CompiledRuns["runs"];
+    let runsSorted1 =  sortByAttempts(runsToFilter, filters.attempts);
+
+    const runsFiltered1 = runsSorted1.filter((run) => {
+      if (filters["status"] !== "all") {
+        return run["Status"]["Finished"] === filters["status"] || run["Status"]["Win"] === filters["status"];
+      }
+      return run;
+    });
+
+    const runsFiltered2 = runsFiltered1.filter((run) => {
+      if (filters["country"] !== "all") {
+        return run["Country"]["CountryName"] === filters["country"];
+      }
+      return run;
+    });
+
+    setRuns(runsFiltered2);
+  },[filters])
+
   return (
     <GameDetails>
       <section className="sidebar">
@@ -20,10 +64,16 @@ export default function SingleGameDetails () {
       </section>
       <section className="main-content">
         <h2>Leaderboard</h2>
-        <CurrentRunHeader />
-        {CompiledRuns['runs'].map((current, index) => (
-        <CurrentRun props={current} key={`${current['GameTitle']}+${index}`}/>
-        ))}
+        <RunsFilter filters={filters} setFilters={setFilters}/>
+        <div className="run-table">
+          <CurrentRunHeader />
+          {runs.length > 0
+          ? runs.map((current, index) => (
+            <CurrentRun props={current} key={`${current['GameTitle']}+${index}`}/>
+            ))
+          : <h1>Didn't find any runs</h1>
+          }
+        </div>
       </section>
     </GameDetails>  
   )
