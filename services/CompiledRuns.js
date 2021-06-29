@@ -58,7 +58,7 @@
                 "Win": 'won',
                 "RunNumber": 1
             },
-            "Tags": ["Normal"]
+            "Tags": ["Basic"]
         },
         {
             "GameTitle": "Pokemon Sword",

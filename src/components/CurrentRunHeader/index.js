@@ -3,20 +3,20 @@ import { RunHeader } from "./styles/CurrentRunHeader"
 export default function CurrentRunHeader () {
   return (
   <RunHeader>
-      <div class="cell">
-        <h4 class="userName">Game Cover</h4>
+      <div className="cell">
+        <h4 className="userName">Game Cover</h4>
       </div>
-      <div class="cell">
-        <h4 class="userName">Title</h4>
+      <div className="cell">
+        <h4 className="userName">Title</h4>
       </div>
-      <div class="cell">
-        <h4 class="userName">Country</h4>
+      <div className="cell">
+        <h4 className="userName">Country</h4>
       </div>
-      <div class="cell">
-      <h4 class="userName">Username</h4>
+      <div className="cell">
+      <h4 className="userName">Username</h4>
       </div>
-      <div class="cell">
-        <h4 class="userName">Run Status</h4>
+      <div className="cell">
+        <h4 className="userName">Run Status</h4>
       </div>
       <div class="cell">
         <h4 class="run-number">Run Attempts</h4>

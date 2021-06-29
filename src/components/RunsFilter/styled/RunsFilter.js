@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const RunsFilterDisplay = styled.div`
-width: 70%;
+width: 90%;
 margin-left: 5%;
 margin-right: 5%;
 display: flex;

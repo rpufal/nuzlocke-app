@@ -24,7 +24,8 @@ export default function SingleGameDetails () {
   const [filters, setFilters] = useState({
     attempts: "all",
     status: "all",
-    country: "all"
+    country: "all",
+    tags: "all",
   })
   const [runs, setRuns] = useState(CompiledRuns["runs"])
   useEffect(() => {
@@ -45,7 +46,14 @@ export default function SingleGameDetails () {
       return run;
     });
 
-    setRuns(runsFiltered2);
+    const runsFiltered3 = runsFiltered2.filter((run) => {
+      if (filters["tags"] !== "all") {
+        return run["Tags"].includes(filters["tags"]);
+      }
+      return run;
+    })
+
+    setRuns(runsFiltered3);
   },[filters])
 
   return (

@@ -10,11 +10,11 @@ export default function Home({toggleTheme}) {
     <>
       <Header toggleTheme={toggleTheme}/>
       <MainArticles>
-          <section class="left-content">
+          <section className="left-content">
             <ArticleSection />
             <LatestRuns />
            </section>
-          <section class="right-content">
+          <section className="right-content">
             <Trending 
             articleImage={"/articles/graph_sinergy_cropped.png"}
             articleTitle={"What's the sinergy between some competitive Pokémon"}
