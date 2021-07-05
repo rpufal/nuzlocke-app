@@ -24,6 +24,12 @@ export const GamesDisplay = styled.section`
     /* margin-right: 2.5%; */
   }
 
+  .panel h1 {
+    /* align-self: center; */
+    margin-left: 100px;
+    margin-bottom: 100px;
+  }
+
   .title {
     height: 2.5rem;
     display: flex;

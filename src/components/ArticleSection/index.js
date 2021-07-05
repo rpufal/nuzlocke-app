@@ -22,7 +22,9 @@ export default function ArticleSection() {
         </section>
         <section className="article">
           <div>
-          <img className="thumbnail" src="/articles/champions43.gif" alt="confused-charizard-gif"/>
+            <a href="/newchallenge/">
+              <img className="thumbnail" src="/articles/champions43.gif" alt="confused-charizard-gif"/>
+            </a>
           </div>
           <span>
             {/* <img  src="/light/pokeball.png" alt="nuzlocke-logo" width={16}/> */}

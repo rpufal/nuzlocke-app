@@ -37,12 +37,15 @@ export default function GamesSection() {
 
   return(
     <GamesDisplay>
-      <div class="title">
+      <div className="title">
         <h3>Games</h3>
       </div>
       <GamesFilter filters={filters} setFilters={setFilters}/>
-      <div class="panel">
-        {games.map((game,index)=> <GameCard game={game} key={index}/>)}
+      <div className="panel">
+        {games.length > 0 
+        ? games.map((game,index)=> <GameCard game={game} key={index}/>)
+        : <h1>Couldn't find any games</h1>
+      }
       </div>
     </GamesDisplay>  
   )
