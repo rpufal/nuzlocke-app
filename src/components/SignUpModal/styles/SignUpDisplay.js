@@ -55,6 +55,20 @@ align-items: center; */
   width: 55%;
 }
 
+.field {
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.validation {
+  margin-left: 5%;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: red;
+}
+
 .low {
   margin-left: 5%;
   width: 95%;

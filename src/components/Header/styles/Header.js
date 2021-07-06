@@ -11,6 +11,12 @@ export const HeaderNav = styled.header`
   position: fixed;
   width: 100%;
 
+  .header-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .react-switch-handle div {
     display: flex;
     flex-direction: row;
@@ -37,12 +43,12 @@ export const HeaderNav = styled.header`
     color: ${props => props.theme.colors.secondary};
   }
 
-  .toggle {
+  /* .toggle {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-  }
+  } */
 
   .modal-background  {
     width: 100vw;
