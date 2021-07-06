@@ -2,15 +2,19 @@ import { HeaderNav } from './styles/Header';
 import Switch from 'react-switch';
 import {useContext, useState} from 'react';
 import { ThemeContext } from 'styled-components';
+import SignUpModal from '../SignUpModal';
+import LoginModal from '../LoginModal';
 
 export default function HeaderApp({toggleTheme}) {
   const { colors, title } = useContext(ThemeContext);
+  const [signup, setSignup] = useState(false);
   const [login, setLogin] = useState(false);
+
 
   return (
       <HeaderNav>
         {/* <nav> */}
-          <div>
+          <div className="header-section">
             <a href="/">
               <img src={`/${title}/pokeball.png`} alt="pokeball" width={30}/>
             </a>
@@ -22,10 +26,12 @@ export default function HeaderApp({toggleTheme}) {
           {/* <h3>Streams</h3> */}
           {/* <h3>Hall of Fame</h3> */}
           <input type="text" placeholder="Search for your favorite game, nuzlocker, etc."/>
-          <a onClick={() => setLogin(true)}>
-            <h3>Log in</h3>
+          <a onClick={() => setSignup(!signup)}>
+            <h3>Sign up</h3>
           </a>
-          <h3>Sign up</h3>
+          <a onClick={() => setLogin(!login)}>
+            <h3>Logn in</h3>
+          </a>
           <Switch 
             onChange={toggleTheme}
             checked={title === 'dark'}
@@ -44,7 +50,8 @@ export default function HeaderApp({toggleTheme}) {
           />
           <img src="/country-icons/united-kingdom.png" alt="britain-flag" width={25}/>
         {/* </nav> */}
-        { login? <p>teste</p> : null }
+        <div className={`modal-background ${signup}`}><SignUpModal setSignup={setSignup} signup={signup}/></div>
+        <div className={`modal-background ${login}`}><LoginModal setLogin={setLogin} login={login}/></div>
       </HeaderNav>
   )
 }

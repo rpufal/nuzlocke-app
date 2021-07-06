@@ -1,7 +1,7 @@
 import { LoginDisplay } from "./styles/LoginDisplay"
 import { useState  } from "react"
 
-export default function LoginModal() {
+export default function LoginModal({login, setLogin}) {
   const [ loginInfo , setLoginInfo ] = useState({
     username: '',
     password: '',
@@ -10,7 +10,7 @@ export default function LoginModal() {
     <LoginDisplay>
       <div className="up">
         <h2>Log in</h2>
-        <h2 className="close">+</h2>
+        <a onClick={() => setLogin(false)}><h2 className="close">+</h2></a>
       </div>
       <div className="middle">
         <label>
@@ -33,7 +33,7 @@ export default function LoginModal() {
       <div className="low">
         <button className="login-button" type="button">Log in</button>
         <button type="button">Forgot Password</button>
-        <button type="button">Cancel</button>
+        <button type="button" onClick={() => setLogin(false)}>Cancel</button>
       </div>
     </LoginDisplay>
   )

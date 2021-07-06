@@ -7,6 +7,13 @@ padding-top: 0.8%;
 padding-bottom: 1.5%;
 margin-bottom: 2rem;
 border-top: 0.35rem solid ${props => props.theme.colors.primary};
+/* display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; */
+
+
+
 
 .up {
   margin-left: 5%;
