@@ -6,10 +6,14 @@ export default function CurrentRun ({props}) {
   return (
     <CurrentRunDiv>
       <div class="cell">
-        <img class="game-cover" src={GameThumbnail} alt={`${GameTitle} cover art`}/>
+        <a href={`/games/heartgold`}>
+          <img class="game-cover" src={GameThumbnail} alt={`${GameTitle} cover art`}/>
+        </a>
       </div>
       <div class="cell">
-        <h4 class="game-title">{GameTitle}</h4>
+        <a href={`/games/heartgold`}>
+          <h4 class="game-title">{GameTitle}</h4>
+        </a>
       </div>
       <div class="cell">
         <img class="country-icon" src={Country['CountryIcon']} alt={`${Country['CountryName']} flag`}/>
@@ -18,7 +22,7 @@ export default function CurrentRun ({props}) {
       <h4 class="userName">{Username}</h4>
       </div>
       <div class="cell">
-        { Status['Finished']? <h4 class={`run-status ${Status.Win}`}>Finished</h4> : <h4 class="run-status ongoing">Ongoing</h4>}
+        { Status['Finished'] === 'finished'? <h4 class={`run-status ${Status.Win}`}>Finished</h4> : <h4 class="run-status ongoing">Ongoing</h4>}
       </div>
       <div class="cell">
         <h4 class="run-number">{Status.RunNumber}</h4>

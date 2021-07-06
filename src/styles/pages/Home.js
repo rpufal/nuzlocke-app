@@ -13,4 +13,5 @@ export const MainArticles = styled.main`
     width: 25%;
     margin-top: 4.5rem;
   }
+
 `;

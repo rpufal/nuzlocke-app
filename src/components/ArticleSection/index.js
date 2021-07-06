@@ -3,14 +3,14 @@ import { ArticleDisplay } from "./styles/ArticleSection";
 export default function ArticleSection() {
   return (
     <ArticleDisplay>
-      <div class="title">
+      <div className="title">
         <h3>New to Nuzlockes?</h3>
       </div>
-      <div class="article-panel">
-        <section class="article">
+      <div className="article-panel">
+        <section className="article">
           <div>
           <a href="/dexvault/what-is-nuzlocke/">
-            <img class="thumbnail" src="/articles/confused-charizard.gif" alt="confused-charizard-gif"/>
+            <img className="thumbnail" src="/articles/confused-charizard.gif" alt="confused-charizard-gif"/>
           </a>
           </div>
           <span>
@@ -20,18 +20,20 @@ export default function ArticleSection() {
             </a>
           </span>
         </section>
-        <section class="article">
+        <section className="article">
           <div>
-          <img class="thumbnail" src="/articles/champions43.gif" alt="confused-charizard-gif"/>
+            <a href="/newchallenge/">
+              <img className="thumbnail" src="/articles/champions43.gif" alt="confused-charizard-gif"/>
+            </a>
           </div>
           <span>
             {/* <img  src="/light/pokeball.png" alt="nuzlocke-logo" width={16}/> */}
             <h4>Start a new run!</h4>
           </span>
         </section>
-        <section class="article">
+        <section className="article">
           <div>
-          <img class="thumbnail" src="/articles/starters43.gif" alt="confused-charizard-gif"/>
+          <img className="thumbnail" src="/articles/starters43.gif" alt="confused-charizard-gif"/>
           </div>
           <span>
             {/* <img src="/light/pokeball.png" alt="nuzlocke-logo" width={16}/> */}

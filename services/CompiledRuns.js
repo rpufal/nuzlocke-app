@@ -9,7 +9,7 @@
                 "CountryName": "Brazil"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'lost',
                 "RunNumber": 4
             },
@@ -24,7 +24,7 @@
                 "CountryName": "Italy"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'won',
                 "RunNumber": 1
             },
@@ -39,7 +39,7 @@
                 "CountryName": "Russia"
             },
             "Status": {
-                "Finished": 0,
+                "Finished": 'ongoing',
                 "Win": '',
                 "RunNumber": 31
             },
@@ -54,11 +54,11 @@
                 "CountryName": "Germany"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'won',
                 "RunNumber": 1
             },
-            "Tags": ["Normal"]
+            "Tags": ["Basic"]
         },
         {
             "GameTitle": "Pokemon Sword",
@@ -69,7 +69,7 @@
                 "CountryName": "Spain"
             },
             "Status": {
-                "Finished": 0,
+                "Finished": 'ongoing',
                 "Win": '',
                 "RunNumber": 7
             },
@@ -84,7 +84,7 @@
                 "CountryName": "Argentina"
             },
             "Status": {
-                "Finished": 0,
+                "Finished": 'ongoing',
                 "Win": '',
                 "RunNumber": 11
             },
@@ -92,14 +92,14 @@
         },
         {
             "GameTitle": "Pokemon Moon",
-            "GameThumbnail": "/game-thumbnails/moon.jpg",
+            "GameThumbnail": "/game-thumbnails/moon.png",
             "Username": "luoguofu9",
             "Country": {
                 "CountryIcon": "/country-icons/china.png",
                 "CountryName": "China"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'lost',
                 "RunNumber": 1
             },
@@ -114,11 +114,11 @@
                 "CountryName": "South-Korea"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'won',
                 "RunNumber": 2
             },
-            "Tags": ["Set mode", "Johto only"]
+            "Tags": ["Set Mode", "Johto only"]
         },
         {
             "GameTitle": "Pokemon Let's Go Eevee",
@@ -129,7 +129,7 @@
                 "CountryName": "Japan"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'won',
                 "RunNumber": 1
             },
@@ -144,7 +144,7 @@
                 "CountryName": "France"
             },
             "Status": {
-                "Finished": 1,
+                "Finished": 'finished',
                 "Win": 'lost',
                 "RunNumber": 2
             },

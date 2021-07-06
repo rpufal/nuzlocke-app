@@ -5,16 +5,17 @@ import Trending from '../components/Trending';
 import LatestRuns from '../components/LatestRuns';
 import { MainArticles } from '../styles/pages/Home';
 
+
 export default function Home({toggleTheme}) {
   return (
     <>
       <Header toggleTheme={toggleTheme}/>
       <MainArticles>
-          <section class="left-content">
+          <section className="left-content">
             <ArticleSection />
             <LatestRuns />
            </section>
-          <section class="right-content">
+          <section className="right-content">
             <Trending 
             articleImage={"/articles/graph_sinergy_cropped.png"}
             articleTitle={"What's the sinergy between some competitive Pokémon"}

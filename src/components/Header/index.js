@@ -1,11 +1,11 @@
 import { HeaderNav } from './styles/Header';
 import Switch from 'react-switch';
-import {useContext} from 'react';
+import {useContext, useState} from 'react';
 import { ThemeContext } from 'styled-components';
 
 export default function HeaderApp({toggleTheme}) {
   const { colors, title } = useContext(ThemeContext);
-
+  const [login, setLogin] = useState(false);
 
   return (
       <HeaderNav>
@@ -18,19 +18,21 @@ export default function HeaderApp({toggleTheme}) {
               <h3>JNI</h3>
             </a>
           </div>
-          <h3>Games</h3>
-          <h3>Streams</h3>
-          <h3>Hall of Fame</h3>
+          <a href="/games"><h3>Games</h3></a>
+          {/* <h3>Streams</h3> */}
+          {/* <h3>Hall of Fame</h3> */}
           <input type="text" placeholder="Search for your favorite game, nuzlocker, etc."/>
-          <h3>Log in</h3>
+          <a onClick={() => setLogin(true)}>
+            <h3>Log in</h3>
+          </a>
           <h3>Sign up</h3>
           <Switch 
             onChange={toggleTheme}
             checked={title === 'dark'}
             checkedIcon={false}
             uncheckedIcon={false}
-            height={10}
-            width={35}
+            height={15}
+            width={40}
             handleDiameter={20}
             offColor={colors.secondary}
             onColor={colors.secondary}
@@ -42,6 +44,7 @@ export default function HeaderApp({toggleTheme}) {
           />
           <img src="/country-icons/united-kingdom.png" alt="britain-flag" width={25}/>
         {/* </nav> */}
+        { login? <p>teste</p> : null }
       </HeaderNav>
   )
 }
