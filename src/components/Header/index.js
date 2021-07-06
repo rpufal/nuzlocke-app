@@ -32,7 +32,8 @@ export default function HeaderApp({toggleTheme}) {
           <a onClick={() => setLogin(!login)}>
             <h3>Logn in</h3>
           </a>
-          <Switch 
+          <Switch
+            className="toggle" 
             onChange={toggleTheme}
             checked={title === 'dark'}
             checkedIcon={false}
