@@ -48,7 +48,7 @@ export const NewGameDisplay = styled.section`
   .optional-rules {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 50%;
+    width: 30%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;

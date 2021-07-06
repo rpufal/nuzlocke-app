@@ -3,6 +3,9 @@ import Footer from '../../components/Footer';
 import NewGameForm from '../../components/NewGameForm';
 import { MainArticles } from '../../styles/pages/Home';
 import Trending from '../../components/Trending';
+import LoginModal from '../../components/LoginModal';
+import SignUpModal from '../../components/SignUpModal';
+
 
 export default function NewChallenge({toggleTheme}) {
   return (
@@ -23,6 +26,8 @@ export default function NewChallenge({toggleTheme}) {
         />
         </section>
       </MainArticles>
+      <LoginModal />
+      <SignUpModal />
       <Footer />
     </div>
     
