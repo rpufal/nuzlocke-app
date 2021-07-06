@@ -1,11 +1,24 @@
 import { LoginDisplay } from "./styles/LoginDisplay"
-import { useState  } from "react"
+import { useState, useEffect  } from "react"
 
-export default function LoginModal({login, setLogin}) {
+export default function LoginModal({ setLogin}) {
   const [ loginInfo , setLoginInfo ] = useState({
     username: '',
     password: '',
   });
+  const [okLogin, setOkLogin] = useState(false)
+  const {username, password} = loginInfo;
+  
+  useEffect(() => {
+    const okUsername = username.length >= 5;
+    const okPassword = password.length >= 8; 
+    if ( okUsername && okPassword) {
+      setOkLogin(true);
+      return null
+    }
+    setOkLogin(false)
+  } ,[loginInfo])
+
   return (
     <LoginDisplay>
       <div className="up">
@@ -13,25 +26,31 @@ export default function LoginModal({login, setLogin}) {
         <a onClick={() => setLogin(false)}><h2 className="close">+</h2></a>
       </div>
       <div className="middle">
-        <label>
-          <p>Username:</p>
-          <input 
-          placeholder="Username" 
-          value={loginInfo.username} 
-          type="text" 
-          onChange={({target}) => setLoginInfo({...loginInfo, username: target.value})}/>
-        </label>
-        <label>
-          <p>Password:</p>
-          <input 
-          placeholder="Password" 
-          value={loginInfo.password} 
-          type="password"
-          onChange={({target}) => setLoginInfo({...loginInfo, password: target.value})}/>
-        </label>
+        <div className="field">
+          <label>
+            <p>Username:</p>
+            <input 
+            placeholder="Username" 
+            value={loginInfo.username} 
+            type="text" 
+            onChange={({target}) => setLoginInfo({...loginInfo, username: target.value})}/>
+          </label>
+          {username.length < 5 && username ? <p className="validation">• Couldn't find username</p> : null}
+        </div>
+        <div className="field">
+          <label>
+            <p>Password:</p>
+            <input 
+            placeholder="Password" 
+            value={loginInfo.password} 
+            type="password"
+            onChange={({target}) => setLoginInfo({...loginInfo, password: target.value})}/>
+          </label>
+          {password.length < 8 && password? <p className="validation">• Wrong password</p> : null}
+        </div>
       </div>
       <div className="low">
-        <button className="login-button" type="button">Log in</button>
+        <button className="login-button" type="button" disabled={!okLogin} onClick={() => console.log('login')}>Log in</button>
         <button type="button">Forgot Password</button>
         <button type="button" onClick={() => setLogin(false)}>Cancel</button>
       </div>

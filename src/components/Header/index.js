@@ -51,8 +51,8 @@ export default function HeaderApp({toggleTheme}) {
           />
           <img src="/country-icons/united-kingdom.png" alt="britain-flag" width={25}/>
         {/* </nav> */}
-        <div className={`modal-background ${signup}`}><SignUpModal setSignup={setSignup} signup={signup}/></div>
-        <div className={`modal-background ${login}`}><LoginModal setLogin={setLogin} login={login}/></div>
+        <div className={`modal-background ${signup}`}><SignUpModal setSignup={setSignup} /></div>
+        <div className={`modal-background ${login}`}><LoginModal setLogin={setLogin}/></div>
       </HeaderNav>
   )
 }

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const LoginDisplay = styled.div`
 width: 30%;
+min-width: 450px;
 background-color: ${props=> props.theme.colors.contrast};
 padding-top: 0.8%;
 padding-bottom: 1.5%;
@@ -28,24 +29,39 @@ border-top: 0.35rem solid ${props => props.theme.colors.primary};
 .middle {
   margin-left: 5%;
   margin-bottom: 2%;
-  
+  margin-right: 5%;
 }
 
 .middle label {
   width: 50%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: flex-start;
   margin-bottom: 3%;
 }
 
 .middle label p {
   width: 40%;
+  margin-right: 5%;
 }
 
 .middle label input {
   width: 60%;
+}
+
+.field {
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.validation {
+  margin-left: 5%;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: red;
 }
 
 .low {
