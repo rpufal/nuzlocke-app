@@ -66,7 +66,7 @@ align-items: center; */
   margin-left: 5%;
   font-size: 0.8rem;
   margin-bottom: 10px;
-  color: red;
+  color: green;
 }
 
 .low {

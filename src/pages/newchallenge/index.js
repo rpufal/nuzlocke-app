@@ -3,6 +3,7 @@ import Footer from '../../components/Footer';
 import NewGameForm from '../../components/NewGameForm';
 import { MainArticles } from '../../styles/pages/Home';
 import Trending from '../../components/Trending';
+import DropdownCheckbox from '../../components/DropdownCheckbox';
 
 
 
@@ -25,6 +26,7 @@ export default function NewChallenge({toggleTheme}) {
         />
         </section>
       </MainArticles>
+      <DropdownCheckbox />
       <Footer />
     </div>
     
