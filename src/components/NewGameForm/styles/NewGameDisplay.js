@@ -36,6 +36,22 @@ export const NewGameDisplay = styled.section`
     justify-content: space-between;
   }
 
+  .search-game {
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .showUnnofficial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 31%;
+    justify-content: space-between;
+  }
+
   .rules-div {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -48,10 +64,16 @@ export const NewGameDisplay = styled.section`
   .optional-rules {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 30%;
+    width: 80%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .optional-rules label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .rules-div label {
@@ -82,10 +104,16 @@ export const NewGameDisplay = styled.section`
     font-size: 1rem;
   }
 
-  /* datalist  option {
-    background-color: ${props => props.theme.colors.secondary};
-    color: ${props => props.theme.colors.text};
-  } */
+  .cantFind label{
+    display: flex;
+  }
+
+  .cantFind {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
   button {
   background-color: ${props => props.theme.colors.secondary};
