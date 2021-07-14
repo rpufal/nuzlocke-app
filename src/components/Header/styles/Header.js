@@ -43,6 +43,10 @@ export const HeaderNav = styled.header`
     color: ${props => props.theme.colors.secondary};
   }
 
+  h3:hover {
+    color: ${props => props.theme.colors.text};
+  }
+
   /* .toggle {
     display: flex;
     flex-direction: row;

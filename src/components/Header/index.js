@@ -24,14 +24,14 @@ export default function HeaderApp({toggleTheme}) {
           </div>
           <a href="/games"><h3>Games</h3></a>
           <a href="/newchallenge"><h3>New Challenge</h3></a>
-          <h3>Streams</h3>
+          {/* <h3>Streams</h3> */}
           {/* <h3>Hall of Fame</h3> */}
           <input type="text" placeholder="Search for your favorite game, nuzlocker, etc."/>
           <a onClick={() => setSignup(!signup)}>
             <h3>Sign up</h3>
           </a>
           <a onClick={() => setLogin(!login)}>
-            <h3>Logn in</h3>
+            <h3>Log in</h3>
           </a>
           <Switch
             className="toggle" 

@@ -100,7 +100,7 @@ export default function NewGameForm() {
               type="checkbox" 
               id="noOverleveling" 
               name="noOverleveling" 
-              value={form.rules.noOverleveling} 
+              checked={form.rules.noOverleveling} 
               onChange={() => setForm({...form, rules : {...form.rules, noOverleveling: !form.rules.noOverleveling }})}/>
             </label>
             <label htmlFor="setMode">
@@ -109,7 +109,7 @@ export default function NewGameForm() {
               type="checkbox" 
               id="setMode" 
               name="setMode" 
-              value={form.rules.setMode} 
+              checked={form.rules.setMode}
               onChange={() => setForm({...form, rules : {...form.rules, setMode: !form.rules.setMode }})}/>
             </label>
             <label htmlFor="noItems">
@@ -118,7 +118,7 @@ export default function NewGameForm() {
               type="checkbox" 
               id="noItems" 
               name="noItems" 
-              value={form.rules.noItems} 
+              checked={form.rules.noItems} 
               onChange={() => setForm({...form, rules : {...form.rules, noItems: !form.rules.noItems }})}/>
             </label>
             <label htmlFor="hardcore">
@@ -127,7 +127,7 @@ export default function NewGameForm() {
               type="checkbox" 
               id="hardcore" 
               name="hardcore" 
-              value={form.rules.hardcore} 
+              checked={form.rules.hardcore} 
               onChange={() => setForm({...form, rules : {...form.rules, hardcore: !form.rules.hardcore, noItems: !form.rules.hardcore, setMode: !form.rules.hardcore, noOverleveling: !form.rules.hardcore }})}/>
             </label>
           </div>

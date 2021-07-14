@@ -16,6 +16,11 @@ export const GameDetails = styled.div`
     border-top: 0.35rem solid ${props => props.theme.colors.primary};
   }
 
+  .index-link {
+    text-decoration: none;
+    color: ${props => props.theme.colors.text};
+  }
+
   .info-card {
     width: 90%;
     margin: 5%; 
@@ -60,6 +65,7 @@ export const GameDetails = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .main-content h2 {
