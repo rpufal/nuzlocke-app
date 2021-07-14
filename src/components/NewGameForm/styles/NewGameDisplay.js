@@ -71,6 +71,22 @@ export const NewGameDisplay = styled.section`
   padding: 5px;
   font-size: 1rem;
 }
+
+  input {
+    margin-left: 10px;
+    background-color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.text};
+    border: 0.5px solid ${props => props.theme.colors.text};
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  /* datalist  option {
+    background-color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.text};
+  } */
+
   button {
   background-color: ${props => props.theme.colors.secondary};
   color: ${props => props.theme.colors.text};

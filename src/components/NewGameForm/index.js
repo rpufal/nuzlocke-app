@@ -1,6 +1,6 @@
 import { NewGameDisplay  } from "./styles/NewGameDisplay";
 import { useState } from 'react';
-import { rules } from "eslint-config-prettier";
+import DropdownCheckbox from "../DropdownCheckbox";
 
 export default function NewGameForm() {
   const [form, setForm] = useState({
@@ -15,18 +15,26 @@ export default function NewGameForm() {
     regions: 'all',
   })
   const games = ['Pokémon Red', 'Pokémon Blue', 'Pokémon Yellow', 'Pokémon Green'];
-  const types = ['Fighting', 'Water', 'Fire', 'Grass'];
-  const regions = ['Kanto', 'Johto', 'Hoenn', 'Sinnoh'];
+  const types = ['Water', 'Fire', 'Grass', 'Normal', 'Fairy', 'Steel', 'Rock', 'Ground', 'Poison',
+  'Bug', 'Dragon', 'Electric', 'Psychic', 'Dark', 'Ghost', 'Ice', 'Flying','Fighting'];
+  const regions = ['Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Alola', 'Galar'];
   return (
     <NewGameDisplay>
       <div className="title">
         <h3>New Challenge</h3>
       </div>
         <form className="panel">
-          <select name="games" onChange={({target})=> setForm({...form, game: target.value})}>
+          <label>
+            Choose a game for your nuzlocke: 
+            <input type="search" list="games" onChange={({target})=> setForm({...form, game: target.value})}/>
+          </label>
+          <datalist id="games">
+            {games.map((current, index) => <option value={current} key={current+index}/>)}
+          </datalist>
+          {/* <select name="games" onChange={({target})=> setForm({...form, game: target.value})}>
             <option value="">Choose a game</option>
             {games.map((current, index) => <option value={current} key={current + index}>{current}</option>)}
-          </select>
+          </select> */}
           <div className="rules-div">
             <label htmlFor="noOverleveling">
               <p>No Overleveling</p>
@@ -69,12 +77,13 @@ export default function NewGameForm() {
           <div className="optional-rules">
             <select name="types" onChange={({target})=> setForm({...form, types: target.value})}>
               <option value="all">Types Enabled</option>
-              {types.map((current, index) => <option value={current} key={current + index}>{current}</option>)}
+              {types.map((current, index) => <option value={current} key={current + index}>{`${current}`}</option>)}
             </select>
             <select name="regions" onChange={({target})=> setForm({...form, regions: target.value})}>
               <option value="all">Regions Enabled</option>
               {regions.map((current, index) => <option value={current} key={current + index}>{current}</option>)}
             </select>
+            {/* <DropdownCheckbox /> */}
           </div>
           <button type="button">
             Submit Challenge

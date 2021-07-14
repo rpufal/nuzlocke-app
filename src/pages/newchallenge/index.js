@@ -26,7 +26,6 @@ export default function NewChallenge({toggleTheme}) {
         />
         </section>
       </MainArticles>
-      <DropdownCheckbox />
       <Footer />
     </div>
     
