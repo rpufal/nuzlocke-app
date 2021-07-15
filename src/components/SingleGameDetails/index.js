@@ -1,6 +1,8 @@
 import {useState} from "react";
 import { GameDetails } from "./styles/GameDetails"
 import RunsSection from "../RunsSection";
+import {CompiledRuns} from '../../../services/CompiledRuns';
+
 
 
 export default function SingleGameDetails () {
@@ -35,7 +37,7 @@ export default function SingleGameDetails () {
       </section>
       <section className="main-content">
         { mainContent.leaderboard 
-          ? <div><h2>Leaderboard</h2><RunsSection /></div>
+          ? <div><h2>Leaderboard</h2><RunsSection runsList={CompiledRuns['runs']}/></div>
           : null
         }
         {
