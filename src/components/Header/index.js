@@ -11,6 +11,7 @@ export default function HeaderApp({toggleTheme}) {
   const [signup, setSignup] = useState(false);
   const [login, setLogin] = useState(false);
   const {loggedIn} = useContext(AppContext);
+  console.log('loggedin context', loggedIn)
   
 
   return (

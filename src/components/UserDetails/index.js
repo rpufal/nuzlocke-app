@@ -1,6 +1,8 @@
 import {useState} from "react";
 import { UserDisplay } from "./styles/UserDisplay"
 import RunsSection from "../RunsSection";
+import {CompiledRuns} from '../../../services/CompiledRuns';
+
 
 export default function UserDetails () {
   const [mainContent, setMainContent] = useState({
@@ -45,7 +47,7 @@ export default function UserDetails () {
       </section>
       <section className="main-content">
         { mainContent.myRuns 
-          ? <div><h2>My Runs</h2><RunsSection /></div>
+          ? <div><h2>My Runs</h2><RunsSection runsList={CompiledRuns['runs']} /></div>
           : null
         }
         {
