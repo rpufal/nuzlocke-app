@@ -19,6 +19,7 @@ export default function NewGameForm() {
     extraRule: '',
   });
   const [showUnnofficial, setShowUnnoficial] = useState(true);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
   const { colors } = useContext(ThemeContext);
 
   const games = [{value: 'None', official:''},{value:'Pokémon Red', official: true}, 
@@ -41,6 +42,25 @@ export default function NewGameForm() {
   }, [showUnnofficial])
   
   
+  const isButtonDisabled = () => {
+    const isGameValid = games.find((current) =>  current.value === form.game);
+    const isExtraGameValid = typeof form.cantFind === 'string' && form.cantFind.length > 5
+    if (isGameValid || isExtraGameValid) {
+      setButtonDisabled(false);
+      return null;
+    } 
+    setButtonDisabled(true);
+    return null
+  }
+
+  const submitRun = () => {
+    console.log(form);
+  }
+
+  useEffect(() => {
+    isButtonDisabled();
+  })
+
   return (
     <NewGameDisplay>
       <div className="title">
@@ -151,7 +171,7 @@ export default function NewGameForm() {
               />
             </label>
           </div>
-          <button type="button">
+          <button disabled={buttonDisabled} onClick={()=> submitRun()} type="button">
             Submit Challenge
           </button>
         </form>

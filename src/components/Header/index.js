@@ -2,6 +2,7 @@ import { HeaderNav } from './styles/Header';
 import Switch from 'react-switch';
 import {useContext, useState} from 'react';
 import { ThemeContext } from 'styled-components';
+import AppContext from '../../context/AppContext';
 import SignUpModal from '../SignUpModal';
 import LoginModal from '../LoginModal';
 
@@ -9,7 +10,8 @@ export default function HeaderApp({toggleTheme}) {
   const { colors, title } = useContext(ThemeContext);
   const [signup, setSignup] = useState(false);
   const [login, setLogin] = useState(false);
-
+  const {loggedIn} = useContext(AppContext);
+  
 
   return (
       <HeaderNav>
@@ -27,12 +29,24 @@ export default function HeaderApp({toggleTheme}) {
           {/* <h3>Streams</h3> */}
           {/* <h3>Hall of Fame</h3> */}
           <input type="text" placeholder="Search for your favorite game, nuzlocker, etc."/>
+          { !loggedIn
+          ?
           <a onClick={() => setSignup(!signup)}>
             <h3>Sign up</h3>
           </a>
+          :null
+          }
+          { !loggedIn
+          ?
           <a onClick={() => setLogin(!login)}>
             <h3>Log in</h3>
           </a>
+          :
+          <a href="/user">
+            <h3>My Profile</h3>
+          </a>
+          }
+
           <Switch
             className="toggle" 
             onChange={toggleTheme}

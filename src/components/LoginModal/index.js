@@ -1,11 +1,13 @@
 import { LoginDisplay } from "./styles/LoginDisplay"
-import { useState, useEffect  } from "react"
+import { useState, useEffect, useContext  } from "react"
+import AppContext from "../../context/AppContext";
 
 export default function LoginModal({ setLogin}) {
   const [ loginInfo , setLoginInfo ] = useState({
     username: '',
     password: '',
   });
+  const {setLoggedIn} = useContext(AppContext)
   const [okLogin, setOkLogin] = useState(false)
   const {username, password} = loginInfo;
   
@@ -18,6 +20,11 @@ export default function LoginModal({ setLogin}) {
     }
     setOkLogin(false)
   } ,[loginInfo])
+
+  const loginFunc = () => {
+    setLoggedIn(true);
+    setLogin(false);
+  }
 
   return (
     <LoginDisplay>
@@ -50,7 +57,12 @@ export default function LoginModal({ setLogin}) {
         </div>
       </div>
       <div className="low">
-        <button className="login-button" type="button" disabled={!okLogin} onClick={() => console.log('login')}>Log in</button>
+        <button 
+          className="login-button" 
+          type="button" 
+          disabled={!okLogin} 
+          onClick={loginFunc}
+        >Log in</button>
         <button type="button">Forgot Password</button>
         <button type="button" onClick={() => setLogin(false)}>Cancel</button>
       </div>
