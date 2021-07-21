@@ -36,6 +36,22 @@ export const NewGameDisplay = styled.section`
     justify-content: space-between;
   }
 
+  .search-game {
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .showUnnofficial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 31%;
+    justify-content: space-between;
+  }
+
   .rules-div {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -48,10 +64,16 @@ export const NewGameDisplay = styled.section`
   .optional-rules {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 30%;
+    width: 80%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .optional-rules label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .rules-div label {
@@ -71,6 +93,28 @@ export const NewGameDisplay = styled.section`
   padding: 5px;
   font-size: 1rem;
 }
+
+  input {
+    margin-left: 10px;
+    background-color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.text};
+    border: 0.5px solid ${props => props.theme.colors.text};
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  .cantFind label{
+    display: flex;
+  }
+
+  .cantFind {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   button {
   background-color: ${props => props.theme.colors.secondary};
   color: ${props => props.theme.colors.text};

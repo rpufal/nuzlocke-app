@@ -2,15 +2,22 @@ import { HeaderNav } from './styles/Header';
 import Switch from 'react-switch';
 import {useContext, useState} from 'react';
 import { ThemeContext } from 'styled-components';
+import AppContext from '../../context/AppContext';
+import SignUpModal from '../SignUpModal';
+import LoginModal from '../LoginModal';
 
 export default function HeaderApp({toggleTheme}) {
   const { colors, title } = useContext(ThemeContext);
+  const [signup, setSignup] = useState(false);
   const [login, setLogin] = useState(false);
+  const {loggedIn} = useContext(AppContext);
+  console.log('loggedin context', loggedIn)
+  
 
   return (
       <HeaderNav>
         {/* <nav> */}
-          <div>
+          <div className="header-section">
             <a href="/">
               <img src={`/${title}/pokeball.png`} alt="pokeball" width={30}/>
             </a>
@@ -19,14 +26,30 @@ export default function HeaderApp({toggleTheme}) {
             </a>
           </div>
           <a href="/games"><h3>Games</h3></a>
+          <a href="/newchallenge"><h3>New Challenge</h3></a>
           {/* <h3>Streams</h3> */}
           {/* <h3>Hall of Fame</h3> */}
           <input type="text" placeholder="Search for your favorite game, nuzlocker, etc."/>
-          <a onClick={() => setLogin(true)}>
+          { !loggedIn
+          ?
+          <a onClick={() => setSignup(!signup)}>
+            <h3>Sign up</h3>
+          </a>
+          :null
+          }
+          { !loggedIn
+          ?
+          <a onClick={() => setLogin(!login)}>
             <h3>Log in</h3>
           </a>
-          <h3>Sign up</h3>
-          <Switch 
+          :
+          <a href="/user">
+            <h3>My Profile</h3>
+          </a>
+          }
+
+          <Switch
+            className="toggle" 
             onChange={toggleTheme}
             checked={title === 'dark'}
             checkedIcon={false}
@@ -44,7 +67,8 @@ export default function HeaderApp({toggleTheme}) {
           />
           <img src="/country-icons/united-kingdom.png" alt="britain-flag" width={25}/>
         {/* </nav> */}
-        { login? <p>teste</p> : null }
+        <div className={`modal-background ${signup}`}><SignUpModal setSignup={setSignup} /></div>
+        <div className={`modal-background ${login}`}><LoginModal setLogin={setLogin}/></div>
       </HeaderNav>
   )
 }

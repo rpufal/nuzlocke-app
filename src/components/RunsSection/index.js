@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import CurrentRun from "../CurrentRun";
-import {CompiledRuns} from '../../../services/CompiledRuns';
 import CurrentRunHeader from "../CurrentRunHeader";
 import RunsFilter from "../RunsFilter";
 import { RunsSectionDisplay } from "./styles/RunsSectionDisplay";
@@ -8,13 +7,10 @@ import { RunsSectionDisplay } from "./styles/RunsSectionDisplay";
 const sortByAttempts = (runs, filterStatus) => {
   let sortedRuns = runs; 
   if (filterStatus === "least") {
-    sortedRuns = CompiledRuns["runs"].sort((firstItem, secondItem) => firstItem.Status.RunNumber - secondItem.Status.RunNumber)
+    sortedRuns = sortedRuns.sort((firstItem, secondItem) => firstItem.Status.RunNumber - secondItem.Status.RunNumber)
   }
   if (filterStatus === "most") {
-    sortedRuns = CompiledRuns["runs"].sort((firstItem, secondItem) => secondItem.Status.RunNumber - firstItem.Status.RunNumber)
-  }
-  if (filterStatus === "all") {
-    sortedRuns = CompiledRuns["runs"];
+    sortedRuns = sortedRuns.sort((firstItem, secondItem) => secondItem.Status.RunNumber - firstItem.Status.RunNumber)
   }
   return sortedRuns;
 }
@@ -45,16 +41,16 @@ const handleFilters = (runs, filters) => {
 
 
 
-export default function RunsSection() {
+export default function RunsSection({runsList}) {
   const [filters, setFilters] = useState({
     attempts: "all",
     status: "all",
     country: "all",
     tags: "all",
   });
-  const [runs, setRuns] = useState(CompiledRuns["runs"])
+  const [runs, setRuns] = useState(runsList);
   useEffect(() => {
-    const runsToFilter = CompiledRuns["runs"];
+    const runsToFilter = runsList;
     const filteredRuns = handleFilters(runsToFilter, filters)
     setRuns(filteredRuns);
   },[filters])

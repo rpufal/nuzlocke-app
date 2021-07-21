@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const GameDetails = styled.div`
+export const UserDisplay = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -29,10 +29,42 @@ export const GameDetails = styled.div`
     justify-content: center;
     align-items: center;
   }
+  
+  .profile-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-  .info-card img {
-    width: 70%;
+  .username-span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+
+  //verificar erro aqui 
+  /* .country-span {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  } */
+
+  .username {
+    margin-right: 5%;
+  }
+
+  .profile-info img {
+    width: 30%;
     /* margin-bottom: 1rem; */
+  }
+
+  .profile-info div img {
+    width: 12%;
+    /* margin-left: 5%; */
   }
 
   .info-card h3 {

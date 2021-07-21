@@ -33,7 +33,9 @@ export default function ArticleSection() {
         </section>
         <section className="article">
           <div>
-          <img className="thumbnail" src="/articles/starters43.gif" alt="confused-charizard-gif"/>
+          <a href="/dexvault/what-is-nuzlocke">
+            <img className="thumbnail" src="/articles/starters43.gif" alt="confused-charizard-gif"/>
+          </a>
           </div>
           <span>
             {/* <img src="/light/pokeball.png" alt="nuzlocke-logo" width={16}/> */}

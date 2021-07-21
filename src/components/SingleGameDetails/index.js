@@ -1,9 +1,17 @@
+import {useState} from "react";
 import { GameDetails } from "./styles/GameDetails"
 import RunsSection from "../RunsSection";
+import {CompiledRuns} from '../../../services/CompiledRuns';
+
 
 
 export default function SingleGameDetails () {
-
+  const [mainContent, setMainContent] = useState({
+    leaderboard: true,
+    statistics: false,
+    guides: false,
+    resources: false
+  });
   return (
     <GameDetails>
       <section className="sidebar">
@@ -12,15 +20,34 @@ export default function SingleGameDetails () {
           <img src="/game-thumbnails/heartgold.png"/>
         </div>
         <div className="index">
-          <h3>Leaderboard</h3>
-          <h3>Statistics</h3>
-          <h3>Guides</h3>
-          <h3>Resources</h3>
+          <a className="index-link" href="/newchallenge"><h3>New Challenge</h3></a>
+          <a className="index-link" onClick={() => setMainContent({leaderboard: true, statistics: false, guides: false, resources: false})}>
+            <h3>Leaderboard</h3>
+          </a>
+          <a className="index-link" onClick={() => setMainContent({leaderboard: false, statistics: true, guides: false, resources: false})}>
+            <h3>Statistics</h3>
+          </a>
+          <a className="index-link" onClick={() => setMainContent({leaderboard: false, statistics: true, guides: false, resources: false})}>
+            <h3>Guides</h3>
+          </a>
+          <a className="index-link" onClick={() => setMainContent({leaderboard: false, statistics: true, guides: false, resources: false})}>
+            <h3>Resources</h3>
+          </a>
         </div>
       </section>
       <section className="main-content">
-        <h2>Leaderboard</h2>
-        <RunsSection />
+        { mainContent.leaderboard 
+          ? <div><h2>Leaderboard</h2><RunsSection runsList={CompiledRuns['runs']}/></div>
+          : null
+        }
+        {
+          mainContent.statistics
+          ? <div>
+              <h2>Not available yet</h2>
+              <h4>This section is currently under construction</h4>
+            </div>
+          : null
+        }
       </section>
     </GameDetails>  
   )

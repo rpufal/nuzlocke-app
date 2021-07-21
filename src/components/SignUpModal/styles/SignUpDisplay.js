@@ -7,6 +7,13 @@ padding-top: 0.8%;
 padding-bottom: 1.5%;
 margin-bottom: 2rem;
 border-top: 0.35rem solid ${props => props.theme.colors.primary};
+/* display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; */
+
+
+
 
 .up {
   margin-left: 5%;
@@ -46,6 +53,20 @@ border-top: 0.35rem solid ${props => props.theme.colors.primary};
 
 .middle label input {
   width: 55%;
+}
+
+.field {
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.validation {
+  margin-left: 5%;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: green;
 }
 
 .low {

@@ -1,9 +1,9 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import NewGameForm from '../../components/NewGameForm';
 import { MainArticles } from '../../styles/pages/Home';
 import Trending from '../../components/Trending';
-import DropdownCheckbox from '../../components/DropdownCheckbox';
+import UserDetails from '../../components/UserDetails';
+
 
 
 
@@ -13,7 +13,7 @@ export default function NewChallenge({toggleTheme}) {
       <Header toggleTheme={toggleTheme} />
       <MainArticles>
         <section class='left-content'>
-          <NewGameForm />
+          <UserDetails />
         </section>
         <section class='right-content'>
         <Trending 
