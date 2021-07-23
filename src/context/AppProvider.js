@@ -1,4 +1,4 @@
-import {  useState  } from "react";
+import {  useEffect, useState  } from "react";
 import AppContext from './AppContext';
 import dark from '../styles/dark';
 import light from '../styles/light'
@@ -10,6 +10,12 @@ const AppProvider = ({children}) => {
   const toggleTheme = () => {
     setTheme(theme.title === "light" ? dark : light);
   };
+
+    useEffect(() => {
+    const loginState = sessionStorage.getItem('loginState');
+    setLoggedIn(loginState || false)
+  })
+
   const context = {
     toggleTheme,
     theme,

@@ -42,7 +42,19 @@ export const UserDisplay = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 5%;
+  }
+
+  .btn-signout {
+    font-size: 0.8rem;
+    background-color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.text};
+    border: 0.5px solid ${props => props.theme.colors.text};
+    padding: 3px;
+  }
+
+  .btn-signout:hover {
+    color: ${props => props.theme.colors.primary};
+    border: 0.5px solid ${props => props.theme.colors.primary};
   }
 
   //verificar erro aqui 
