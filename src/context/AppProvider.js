@@ -14,7 +14,7 @@ const AppProvider = ({children}) => {
     useEffect(() => {
     const loginState = sessionStorage.getItem('loginState');
     setLoggedIn(loginState || false)
-  })
+  },[])
 
   const context = {
     toggleTheme,
