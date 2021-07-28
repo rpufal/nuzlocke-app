@@ -1,7 +1,10 @@
-import {useState} from "react";
+import {useState, useContext} from "react";
+// import {Link} from "react-router-dom";
 import { UserDisplay } from "./styles/UserDisplay"
 import RunsSection from "../RunsSection";
 import {CompiledRuns} from '../../../services/CompiledRuns';
+import AppContext from "../../context/AppContext";
+
 
 
 export default function UserDetails () {
@@ -10,6 +13,15 @@ export default function UserDetails () {
     statistics: false,
     info: false,
   });
+  const {setLoggedIn, loggedIn} = useContext(AppContext)
+
+
+  const logoutFunc = () => {
+    setLoggedIn(false)
+    sessionStorage.setItem('loginState', false);
+    console.log('logout func')
+  }
+
   return (
     <UserDisplay>
       <section className="sidebar">
@@ -29,6 +41,9 @@ export default function UserDetails () {
                   alt="country-flag" 
                 /> */}
               </span>
+              {/* <Link to="/newchallenge"> */}
+              <button className="btn-signout" onClick={logoutFunc}>Log out</button>
+              {/* </Link> */}
             </div>
           </div>
         </div>

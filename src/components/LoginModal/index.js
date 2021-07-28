@@ -2,7 +2,7 @@ import { LoginDisplay } from "./styles/LoginDisplay"
 import { useState, useEffect, useContext  } from "react"
 import AppContext from "../../context/AppContext";
 
-export default function LoginModal({ setLogin}) {
+export default function LoginModal({ setShowLogin}) {
   const [ loginInfo , setLoginInfo ] = useState({
     username: '',
     password: '',
@@ -22,15 +22,16 @@ export default function LoginModal({ setLogin}) {
   } ,[loginInfo])
 
   const loginFunc = () => {
-    setLoggedIn(true);
-    setLogin(false);
+    setLoggedIn(true)
+    sessionStorage.setItem('loginState', true);
+    setShowLogin(false);
   }
 
   return (
     <LoginDisplay>
       <div className="up">
         <h2>Log in</h2>
-        <a onClick={() => setLogin(false)}><h2 className="close">+</h2></a>
+        <a onClick={() => setShowLogin(false)}><h2 className="close">+</h2></a>
       </div>
       <div className="middle">
         <div className="field">
@@ -64,7 +65,7 @@ export default function LoginModal({ setLogin}) {
           onClick={loginFunc}
         >Log in</button>
         <button type="button">Forgot Password</button>
-        <button type="button" onClick={() => setLogin(false)}>Cancel</button>
+        <button type="button" onClick={() => setShowLogin(false)}>Cancel</button>
       </div>
     </LoginDisplay>
   )

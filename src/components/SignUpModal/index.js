@@ -1,7 +1,7 @@
 import { SignUpDisplay } from "./styles/SignUpDisplay"
 import { useState, useEffect  } from "react"
 
-export default function SignUpModal({setSignup}) {
+export default function SignUpModal({setShowSignup}) {
   const [ signupInfo , setSignupInfo ] = useState({
     username: '',
     email: '',
@@ -27,7 +27,7 @@ export default function SignUpModal({setSignup}) {
     <SignUpDisplay>
       <div className="up">
         <h2>Sign up</h2>
-        <a onClick={() => setSignup(false)}><h2 className="close">+</h2></a>
+        <a onClick={() => setShowSignup(false)}><h2 className="close">+</h2></a>
       </div>
       <div className="middle">
         <div className="field">
@@ -77,7 +77,7 @@ export default function SignUpModal({setSignup}) {
       </div>
       <div className="low">
         <button className="signup-button" type="button" disabled={!okSignup} onClick={()=> console.log('sign up')}>Sign up</button>
-        <button type="button" onClick={() => setSignup(false)}>Cancel</button>
+        <button type="button" onClick={() => setShowSignup(false)}>Cancel</button>
       </div>
     </SignUpDisplay>
   )

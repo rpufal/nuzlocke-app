@@ -18,11 +18,11 @@ export default function CurrentRunHeader () {
       <div className="cell">
         <h4 className="userName">Run Status</h4>
       </div>
-      <div class="cell">
-        <h4 class="run-number">Run Attempts</h4>
+      <div className="cell">
+        <h4 className="run-number">Run Attempts</h4>
       </div>
-      <div class="cell">
-        <h4 class="userName">Tags</h4>
+      <div className="cell">
+        <h4 className="userName">Tags</h4>
       </div>
     </RunHeader>
   )
